@@ -1,0 +1,180 @@
+/* Thiết lập kiểu chữ và nền cơ bản cho toàn trang */
+body {
+    font-family: 'Poppins', Arial, sans-serif; /* Thiết lập font chữ */
+    margin: 0; /* Loại bỏ khoảng cách mặc định của trang */
+    padding: 0; /* Loại bỏ đệm mặc định của trang */
+    background-color: #ffffff; /* Màu nền cho trang */
+    color: #333; /* Màu chữ chính cho trang */
+}
+h1, h2, h3, p {
+    margin: 0; 
+    padding: 0;
+}
+.main-content__title {
+    text-align: center; /* Căn giữa văn bản */
+    margin: 20px 20px; /* Khoảng cách phía trên và dưới */
+    font-size: 24px; /* Kích thước chữ */
+    color: #3d5a80; /* Màu chữ */
+}
+.main-content {
+    padding: 40px 20px; /* Phần đệm cho nội dung chính */
+}
+.header {
+    display: flex; /* Sử dụng Flexbox để sắp xếp nội dung */
+    justify-content: space-between; /* Căn đều hai đầu (logo và menu) */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 15px 20px; /* Đệm bên trong */
+    background-color: #3d5a80; /* Màu nền của header */
+    color: #fff; /* Màu chữ trắng */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+.header__logo {
+    font-size: 28px; /* Kích thước chữ cho logo */
+    font-weight: bold; /* Chữ in đậm */
+    color: #fff; /* Màu chữ logo */
+}
+.header__nav-list {
+    list-style: none; /* Loại bỏ ký hiệu đầu dòng trong danh sách */
+    display: flex; /* Các mục điều hướng xếp ngang */
+    gap: 30px; /* Khoảng cách giữa các mục */
+}
+.header__nav-item a {
+    text-decoration: none; /* Loại bỏ gạch chân */
+    color: #fff; /* Màu chữ trắng */
+    font-weight: 500; /* Chữ hơi đậm */
+    padding: 8px 16px; /* Đệm bên trong liên kết */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển màu khi hover */
+}
+.header__nav-item a:hover {
+    background-color: #293241; /* Màu nền khi hover */
+    border-radius: 5px; /* Bo góc nhẹ */
+    color: #339598
+}
+.header__icons .header__icon {
+    margin-left: 30px; /* Khoảng cách giữa các biểu tượng */
+    color: #fff; /* Màu biểu tượng mặc định */
+    font-size: 20px; /* Kích thước biểu tượng */
+    transition: color 0.3s; /* Hiệu ứng chuyển màu khi hover */
+}
+.header__icons .header__icon:hover {
+    color: #339598; /* Màu biểu tượng khi hover */
+}
+.categories {
+    display: flex; /* Sắp xếp danh mục ngang hàng */
+    justify-content: center; /* Căn giữa danh mục */
+    gap: 30px; /* Khoảng cách giữa các danh mục */
+    margin-bottom: 30px; /* Khoảng cách bên dưới */
+}
+.category {
+    padding: 15px 25px; /* Khoảng cách bên trong */
+    background-color: #e0fbfc; /* Màu nền danh mục */
+    border-radius: 8px; /* Bo góc */
+    text-transform: uppercase; /* Viết hoa toàn bộ chữ */
+    font-weight: bold; /* Chữ đậm */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng khi hover */
+}
+.category:hover {
+    background-color: #3d5a80; /* Màu nền khi hover */
+    color: #fff; /* Màu chữ khi hover */
+    transform: translateY(-5px); /* Dịch chuyển lên trên */
+}
+.featured-products {
+    display: grid; /* Sử dụng grid để sắp xếp sản phẩm */
+    grid-template-columns: repeat(6, 1fr); /* Bố cục 6 cột */
+    gap: 20px; /* Khoảng cách giữa các sản phẩm */
+    text-align: center; /* Căn giữa nội dung bên trong sản phẩm */
+    margin-top: 20px; /* Khoảng cách phía trên */
+}
+
+/* Sản phẩm chiếm 1 cột trong 6 cột và chỉ hiển thị 4 sản phẩm */
+.featured-products .product {
+    grid-column: span 1; /* Mỗi sản phẩm chiếm 1 cột */
+    padding: 20px; /* Khoảng cách bên trong sản phẩm */
+    background-color: #d9d9d9; /* Màu nền sản phẩm */
+    border-radius: 10px; /* Bo góc sản phẩm */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Đổ bóng nhẹ */
+    transition: box-shadow 0.3s, transform 0.3s; /* Hiệu ứng hover */
+    overflow: hidden; /* Không cho phép nội dung tràn ra ngoài */
+    position: relative; /* Định vị các phần tử con */
+}
+
+/* Chỉ định vị trí cho 4 sản phẩm trong mỗi dòng */
+.featured-products .product:nth-child(4n+1) {
+    grid-column-start: 2; /* Bắt đầu từ cột thứ 2 */
+}
+
+.featured-products .product:nth-child(4n+2) {
+    grid-column-start: 3; /* Bắt đầu từ cột thứ 3 */
+}
+
+.featured-products .product:nth-child(4n+3) {
+    grid-column-start: 4; /* Bắt đầu từ cột thứ 4 */
+}
+
+.featured-products .product:nth-child(4n+4) {
+    grid-column-start: 5; /* Bắt đầu từ cột thứ 5 */
+}
+
+.featured-products .product__image {
+    width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng */
+    height: auto; /* Giữ tỉ lệ chiều cao tự động */
+    border-radius: 8px; /* Bo góc cho hình ảnh */
+}
+
+.featured-products .product__title {
+    margin: 10px 0 5px; /* Khoảng cách phía trên và dưới */
+    font-size: 18px; /* Kích thước chữ */
+    color: #3d5a80; /* Màu tiêu đề */
+}
+
+.featured-products .product__details {
+    font-size: 14px; /* Kích thước chữ chi tiết */
+    color: #666; /* Màu chữ chi tiết */
+}
+
+.featured-products .product:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Đổ bóng mạnh hơn khi hover */
+    transform: translateY(-5px); /* Dịch chuyển sản phẩm lên trên */
+}
+
+.footer {
+    text-align: center; /* Căn giữa nội dung */
+    padding: 25px 20px; /* Khoảng cách bên trong footer */
+    background-color: #293241; /* Màu nền của footer */
+    color: #e0fbfc; /* Màu chữ */
+    font-size: 16px; /* Kích thước chữ */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ ở phía trên */
+}
+
+
+
+@media (max-width: 768px) {
+    /* Sắp xếp lại header thành cột khi màn hình nhỏ */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Xếp danh mục theo cột khi màn hình nhỏ */
+    .categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category {
+        margin-bottom: 20px; /* Khoảng cách giữa các danh mục */
+        width: 80%; /* Chiếm 80% chiều rộng */
+    }
+
+    /* Điều chỉnh lưới sản phẩm thành 2 cột khi màn hình nhỏ */
+    .featured-products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Điều chỉnh chiều rộng sản phẩm */
+    .featured-products .product {
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        max-width: 300px; /* Đặt chiều rộng tối đa cho sản phẩm */
+    }
+}
