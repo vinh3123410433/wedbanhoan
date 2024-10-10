@@ -146,8 +146,16 @@ h1, h2, h3, p {
     font-size: 16px; /* Kích thước chữ */
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ ở phía trên */
 }
-
-
+.product__icons {
+    display: flex; /* Sử dụng flexbox để sắp xếp các biểu tượng */
+    justify-content: center; /* Căn giữa các biểu tượng */
+    margin-top: 40px; /* Đẩy các biểu tượng xuống dưới cùng của div */
+    gap: 70px; /* Khoảng cách giữa các biểu tượng */
+}
+.product__icons a:hover {
+    border-radius: 5px; /* Bo góc nhẹ */
+    color: #339598
+}
 
 @media (max-width: 768px) {
     /* Sắp xếp lại header thành cột khi màn hình nhỏ */
