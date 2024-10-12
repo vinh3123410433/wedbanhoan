@@ -6,19 +6,27 @@ body {
     background-color: #ffffff; /* Màu nền cho trang */
     color: #333; /* Màu chữ chính cho trang */
 }
+
+/* Cài đặt cho các thẻ tiêu đề và đoạn văn */
 h1, h2, h3, p {
-    margin: 0; 
-    padding: 0;
+    margin: 0; /* Loại bỏ khoảng cách mặc định */
+    padding: 0; /* Loại bỏ đệm mặc định */
 }
+
+/* Tiêu đề nội dung chính */
 .main-content__title {
     text-align: center; /* Căn giữa văn bản */
     margin: 20px 20px; /* Khoảng cách phía trên và dưới */
     font-size: 24px; /* Kích thước chữ */
     color: #3d5a80; /* Màu chữ */
 }
+
+/* Nội dung chính của trang */
 .main-content {
     padding: 40px 20px; /* Phần đệm cho nội dung chính */
 }
+
+/* Thiết lập cho header */
 .header {
     display: flex; /* Sử dụng Flexbox để sắp xếp nội dung */
     justify-content: space-between; /* Căn đều hai đầu (logo và menu) */
@@ -28,16 +36,22 @@ h1, h2, h3, p {
     color: #fff; /* Màu chữ trắng */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
 }
+
+/* Logo trong header */
 .header__logo {
     font-size: 28px; /* Kích thước chữ cho logo */
     font-weight: bold; /* Chữ in đậm */
     color: #fff; /* Màu chữ logo */
 }
+
+/* Danh sách điều hướng trong header */
 .header__nav-list {
     list-style: none; /* Loại bỏ ký hiệu đầu dòng trong danh sách */
     display: flex; /* Các mục điều hướng xếp ngang */
     gap: 30px; /* Khoảng cách giữa các mục */
 }
+
+/* Các mục điều hướng */
 .header__nav-item a {
     text-decoration: none; /* Loại bỏ gạch chân */
     color: #fff; /* Màu chữ trắng */
@@ -45,26 +59,36 @@ h1, h2, h3, p {
     padding: 8px 16px; /* Đệm bên trong liên kết */
     transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển màu khi hover */
 }
+
+/* Hiệu ứng hover cho các mục điều hướng */
 .header__nav-item a:hover {
     background-color: #293241; /* Màu nền khi hover */
     border-radius: 5px; /* Bo góc nhẹ */
-    color: #339598
+    color: #339598; /* Màu chữ khi hover */
 }
+
+/* Biểu tượng trong header */
 .header__icons .header__icon {
     margin-left: 30px; /* Khoảng cách giữa các biểu tượng */
     color: #fff; /* Màu biểu tượng mặc định */
     font-size: 20px; /* Kích thước biểu tượng */
     transition: color 0.3s; /* Hiệu ứng chuyển màu khi hover */
 }
+
+/* Hiệu ứng hover cho biểu tượng */
 .header__icons .header__icon:hover {
     color: #339598; /* Màu biểu tượng khi hover */
 }
+
+/* Danh sách danh mục */
 .categories {
     display: flex; /* Sắp xếp danh mục ngang hàng */
     justify-content: center; /* Căn giữa danh mục */
     gap: 30px; /* Khoảng cách giữa các danh mục */
     margin-bottom: 30px; /* Khoảng cách bên dưới */
 }
+
+/* Mỗi danh mục */
 .category {
     padding: 15px 25px; /* Khoảng cách bên trong */
     background-color: #e0fbfc; /* Màu nền danh mục */
@@ -74,11 +98,15 @@ h1, h2, h3, p {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
     transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng khi hover */
 }
+
+/* Hiệu ứng hover cho danh mục */
 .category:hover {
     background-color: #3d5a80; /* Màu nền khi hover */
     color: #fff; /* Màu chữ khi hover */
     transform: translateY(-5px); /* Dịch chuyển lên trên */
 }
+
+/* Các sản phẩm nổi bật */
 .featured-products {
     display: grid; /* Sử dụng grid để sắp xếp sản phẩm */
     grid-template-columns: repeat(6, 1fr); /* Bố cục 6 cột */
@@ -87,7 +115,7 @@ h1, h2, h3, p {
     margin-top: 20px; /* Khoảng cách phía trên */
 }
 
-/* Sản phẩm chiếm 1 cột trong 6 cột và chỉ hiển thị 4 sản phẩm */
+/* Mỗi sản phẩm trong danh sách sản phẩm nổi bật */
 .featured-products .product {
     grid-column: span 1; /* Mỗi sản phẩm chiếm 1 cột */
     padding: 20px; /* Khoảng cách bên trong sản phẩm */
@@ -116,28 +144,33 @@ h1, h2, h3, p {
     grid-column-start: 5; /* Bắt đầu từ cột thứ 5 */
 }
 
+/* Hình ảnh của sản phẩm */
 .featured-products .product__image {
     width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng */
     height: auto; /* Giữ tỉ lệ chiều cao tự động */
     border-radius: 8px; /* Bo góc cho hình ảnh */
 }
 
+/* Tiêu đề sản phẩm */
 .featured-products .product__title {
     margin: 10px 0 5px; /* Khoảng cách phía trên và dưới */
     font-size: 18px; /* Kích thước chữ */
     color: #3d5a80; /* Màu tiêu đề */
 }
 
+/* Chi tiết sản phẩm */
 .featured-products .product__details {
     font-size: 14px; /* Kích thước chữ chi tiết */
     color: #666; /* Màu chữ chi tiết */
 }
 
+/* Hiệu ứng hover cho sản phẩm */
 .featured-products .product:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Đổ bóng mạnh hơn khi hover */
     transform: translateY(-5px); /* Dịch chuyển sản phẩm lên trên */
 }
 
+/* Footer của trang */
 .footer {
     text-align: center; /* Căn giữa nội dung */
     padding: 25px 20px; /* Khoảng cách bên trong footer */
@@ -146,28 +179,58 @@ h1, h2, h3, p {
     font-size: 16px; /* Kích thước chữ */
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ ở phía trên */
 }
+
+/* Biểu tượng trong sản phẩm */
 .product__icons {
     display: flex; /* Sử dụng flexbox để sắp xếp các biểu tượng */
     justify-content: center; /* Căn giữa các biểu tượng */
     margin-top: 40px; /* Đẩy các biểu tượng xuống dưới cùng của div */
     gap: 70px; /* Khoảng cách giữa các biểu tượng */
 }
+
+/* Hiệu ứng hover cho biểu tượng trong sản phẩm */
 .product__icons a:hover {
     border-radius: 5px; /* Bo góc nhẹ */
-    color: #339598
+    color: #399b9f; /* Màu chữ khi hover */
 }
 
+/* Thiết lập cho form */
+.form {
+    display: none; /* Ẩn tất cả các form ban đầu */
+}
+
+.form.active {
+    display: block; /* Hiện form đang hoạt động */
+}
+/* Giả sử phần "Đăng Nhập" nằm trong một div có class là 'login' */
+.login-form {
+    display: flex;
+    flex-direction: column; /* Sắp xếp theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    height: 100vh; /* Chiều cao 100% của viewport */
+    padding: 40px; /* Thêm khoảng cách bên trong */
+    border: 1px solid #ccc; /* Đường viền nhẹ */
+    background-color: #fff; /* Màu nền trắng */
+    border-radius: 10px; /* Bo góc cho form */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    max-width: 400px; /* Chiều rộng tối đa */
+    margin: auto; /* Căn giữa form trong viewport */
+}
+
+
+/* Responsive: Điều chỉnh kiểu cho màn hình nhỏ */
 @media (max-width: 768px) {
     /* Sắp xếp lại header thành cột khi màn hình nhỏ */
     .header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column; /* Đặt thành cột */
+        align-items: flex-start; /* Căn trái cho các phần tử trong header */
     }
 
     /* Xếp danh mục theo cột khi màn hình nhỏ */
     .categories {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Đặt thành cột */
+        align-items: center; /* Căn giữa các danh mục */
     }
 
     .category {
@@ -177,7 +240,7 @@ h1, h2, h3, p {
 
     /* Điều chỉnh lưới sản phẩm thành 2 cột khi màn hình nhỏ */
     .featured-products {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* 2 cột cho sản phẩm */
     }
 
     /* Điều chỉnh chiều rộng sản phẩm */
