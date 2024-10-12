@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Phần đầu trang -->
     <header class="header">
-        <div class="header__logo">Logo</div>
+        <div class="header__logo">LOGO</div>
         <nav class="header__nav">
             <ul class="header__nav-list">
                 <li class="header__nav-item"><a href="#">TRANG CHỦ</a></li>
@@ -20,18 +21,21 @@
         </nav>
         <div class="header__icons">
             <a href="#" class="header__icon"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="#" class="header__icon"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://web.facebook.com/nguyenthaivinh23052005?locale=vi_VN" class="header__icon"><i class="fa-brands fa-facebook"></i></a>
             <a href="#" class="header__icon"><i class="fa-solid fa-map-marker-alt"></i></a>
-            <a href="#" class="header__icon"><i class="fa-solid fa-user"></i></a>
+            <a href="#" class="header__icon" onclick="toggleLoginForm()"><i class="fa-solid fa-user"></i></a>
         </div>
     </header>
 
-    <section class="contact">
-        <div class="contact__phone"></div>
-        <div class="contact__location"></div>
-    </section>
+    <!-- Phần chính của trang -->
+    <main class="main-content" id="mainContent">
+        <!-- Thông tin liên hệ -->
+        <section class="contact">
+            <div class="contact__phone"></div>
+            <div class="contact__location"></div>
+        </section>
 
-    <main class="main-content">
+        <!-- Sản phẩm nổi bật -->
         <h2 class="main-content__title">SẢN PHẨM NỔI BẬT</h2>
         <section class="categories">
             <div class="category">TẤT CẢ</div>
@@ -40,9 +44,11 @@
             <div class="category">TRÀ SỮA</div>
             <div class="category">NƯỚC NGỌT</div>
         </section>
+
         <section class="featured-products">
+            <!-- Các sản phẩm -->
             <div class="product">
-                <img src="placeholder.jpg" alt="Product Image" class="product__image">
+                <img src="anh/cafe.jpg" alt="anh cafe" class="product__image">
                 <h3 class="product__title">Product Title 1</h3>
                 <p class="product__details">Product Details 1</p>
                 <div class="product__icons">
@@ -51,10 +57,11 @@
                     <a href="#" class="product__icon"><i class="fas fa-eye"></i></a>
                 </div>
             </div>
-            <!-- Thêm các sản phẩm khác ở đây -->
+
+            <!-- Thêm sản phẩm khác -->
             <div class="product">
-                <img src="placeholder.jpg" alt="Product Image" class="product__image">
-                <h3 class="product__title">Product Title 2</h3>
+                <img src="anh/ann.jpg" alt="anh do an" class="product__image">
+                <h3 class="product__title">banh mi</h3>
                 <p class="product__details">Product Details 2</p>
                 <div class="product__icons">
                     <a href="#" class="product__icon"><i class="fas fa-shopping-cart"></i></a>
@@ -62,112 +69,36 @@
                     <a href="#" class="product__icon"><i class="fas fa-eye"></i></a>
                 </div>
             </div>
-            <div class="product">
-                <img src="placeholder.jpg" alt="Product Image" class="product__image">
-                <h3 class="product__title">Product Title 2</h3>
-                <p class="product__details">Product Details 2</p>
-                <div class="product__icons">
-                    <a href="#" class="product__icon"><i class="fas fa-shopping-cart"></i></a>
-                    <a href="#" class="product__icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="product__icon"><i class="fas fa-eye"></i></a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="placeholder.jpg" alt="Product Image" class="product__image">
-                <h3 class="product__title">Product Title 2</h3>
-                <p class="product__details">Product Details 2</p>
-                <div class="product__icons">
-                    <a href="#" class="product__icon"><i class="fas fa-shopping-cart"></i></a>
-                    <a href="#" class="product__icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="product__icon"><i class="fas fa-eye"></i></a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="placeholder.jpg" alt="Product Image" class="product__image">
-                <h3 class="product__title">Product Title 2</h3>
-                <p class="product__details">Product Details 2</p>
-                <div class="product__icons">
-                    <a href="#" class="product__icon"><i class="fas fa-shopping-cart"></i></a>
-                    <a href="#" class="product__icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="product__icon"><i class="fas fa-eye"></i></a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="placeholder.jpg" alt="Product Image" class="product__image">
-                <h3 class="product__title">Product Title 2</h3>
-                <p class="product__details">Product Details 2</p>
-                <div class="product__icons">
-                    <a href="#" class="product__icon"><i class="fas fa-shopping-cart"></i></a>
-                    <a href="#" class="product__icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="product__icon"><i class="fas fa-eye"></i></a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="placeholder.jpg" alt="Product Image" class="product__image">
-                <h3 class="product__title">Product Title 2</h3>
-                <p class="product__details">Product Details 2</p>
-                <div class="product__icons">
-                    <a href="#" class="product__icon"><i class="fas fa-shopping-cart"></i></a>
-                    <a href="#" class="product__icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="product__icon"><i class="fas fa-eye"></i></a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="placeholder.jpg" alt="Product Image" class="product__image">
-                <h3 class="product__title">Product Title 2</h3>
-                <p class="product__details">Product Details 2</p>
-                <div class="product__icons">
-                    <a href="#" class="product__icon"><i class="fas fa-shopping-cart"></i></a>
-                    <a href="#" class="product__icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="product__icon"><i class="fas fa-eye"></i></a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="placeholder.jpg" alt="Product Image" class="product__image">
-                <h3 class="product__title">Product Title 2</h3>
-                <p class="product__details">Product Details 2</p>
-                <div class="product__icons">
-                    <a href="#" class="product__icon"><i class="fas fa-shopping-cart"></i></a>
-                    <a href="#" class="product__icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="product__icon"><i class="fas fa-eye"></i></a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="placeholder.jpg" alt="Product Image" class="product__image">
-                <h3 class="product__title">Product Title 2</h3>
-                <p class="product__details">Product Details 2</p>
-                <div class="product__icons">
-                    <a href="#" class="product__icon"><i class="fas fa-shopping-cart"></i></a>
-                    <a href="#" class="product__icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="product__icon"><i class="fas fa-eye"></i></a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="placeholder.jpg" alt="Product Image" class="product__image">
-                <h3 class="product__title">Product Title 2</h3>
-                <p class="product__details">Product Details 2</p>
-                <div class="product__icons">
-                    <a href="#" class="product__icon"><i class="fas fa-shopping-cart"></i></a>
-                    <a href="#" class="product__icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="product__icon"><i class="fas fa-eye"></i></a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="placeholder.jpg" alt="Product Image" class="product__image">
-                <h3 class="product__title">Product Title 2</h3>
-                <p class="product__details">Product Details 2</p>
-                <div class="product__icons">
-                    <a href="#" class="product__icon"><i class="fas fa-shopping-cart"></i></a>
-                    <a href="#" class="product__icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="product__icon"><i class="fas fa-eye"></i></a>
-                </div>
-            </div>
-            <!-- Tiếp tục thêm các sản phẩm khác -->
+
+            <!-- Có thể tiếp tục thêm sản phẩm khác ở đây -->
+            <!-- Lặp lại cấu trúc cho các sản phẩm khác -->
         </section>
     </main>
 
+    <!-- Form Đăng Nhập -->
+    <div id="loginForm" class="login-form" style="display: none;"> <!-- Ẩn form đăng nhập khi bắt đầu -->
+        <h2>Đăng Nhập</h2>
+        <input type="text" placeholder="Email" required>
+        <input type="password" placeholder="Mật khẩu" required>
+        <button type="button" onclick="login()">Đăng Nhập</button>
+        <p>Không có tài khoản? <a href="#" onclick="showCreateAccount()">Tạo tài khoản</a></p>
+    </div>
+
+    <!-- Form Tạo Tài Khoản -->
+    <div id="createAccountForm" class="login-form" style="display: none;"> <!-- Ẩn form tạo tài khoản khi bắt đầu -->
+        <h2>Tạo Tài Khoản</h2>
+        <input type="text" placeholder="Email" required>
+        <input type="password" placeholder="Mật khẩu" required>
+        <input type="password" placeholder="Xác nhận mật khẩu" required>
+        <button type="button" onclick="createAccount()">Tạo Tài Khoản</button>
+        <p>Đã có tài khoản? <a href="#" onclick="showLogin()">Đăng nhập</a></p>
+    </div>
+    <!-- Chân trang -->
     <footer class="footer">
         Footer content
     </footer>
+
+    <!-- Liên kết đến tệp JavaScript của bạn -->
+    <script src="script.js"></script>
 </body>
 </html>
